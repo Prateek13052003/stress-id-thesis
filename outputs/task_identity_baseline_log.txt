@@ -1,0 +1,14 @@
+TASK-IDENTITY BASELINE: how well can you guess binary-stress using ONLY the task name (Baseline/Relax/Counting1/...), with zero physiological/audio/video signal at all?
+
+chance level = 0.500
+n=700 rows, 64 subjects, 11 tasks
+
+1. Majority-vote-per-task (predict each task's most common label)
+   pooled balanced_acc = 0.705 +/- 0.013
+   per-fold: [0.69, 0.709, 0.702, 0.699, 0.724]
+
+2. RandomForest trained only on one-hot task identity
+   pooled balanced_acc = 0.689 +/- 0.025
+   per-fold: [0.69, 0.659, 0.702, 0.672, 0.724]
+
+For reference: chance level = 0.500.

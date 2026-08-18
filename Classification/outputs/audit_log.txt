@@ -1,0 +1,128 @@
+
+========================================================================
+1. FEATURE FILES
+========================================================================
+  ecg                774 rows x    46 cols   |   65 subjects  |  ecg_features.csv
+  eda                773 rows x    24 cols   |   65 subjects  |  eda_features.csv
+  resp               774 rows x    62 cols   |   65 subjects  |  resp_features.csv
+  video              603 rows x    84 cols   |   55 subjects  |  video11tasks_aus_gaze_mean_std.csv
+  audio              378 rows x   140 cols   |   54 subjects  |  HCfeatures.csv
+  physio_all         773 rows x   132 cols   |   65 subjects  |  all_physiological_features.csv
+  video_7tasks       385 rows x    84 cols   |   55 subjects  |  video7tasks_aus_gaze_mean_std.csv
+  video_morestat     603 rows x   462 cols   |   55 subjects  |  video11tasks_aus_gaze_morestats.csv
+  audio_w2v          377 rows x     2 cols   |   54 subjects  |  W2Vfeatures.csv
+
+========================================================================
+2. LABELS
+========================================================================
+  labels.csv          : 700 rows
+  after .dropna()     : 700 rows   (0 rows mein NaN tha)
+  columns             : ['binary-stress', 'affect3-class']
+  binary-stress       : 0=332  1=368
+  affect3-class       : 0=253  1=202  2=245
+
+========================================================================
+3. ROW COUNT AUDIT  (paper ke claims vs asli data)
+========================================================================
+  file                 rows   labeled  unlabeled
+  ----------------------------------------------
+  ecg                   774       700         74
+  eda                   773       699         74
+  resp                  774       700         74
+  video                 603       600          3
+  audio                 378       378          0
+  physio_all            773       699         74
+  video_7tasks          385       385          0
+  video_morestat        603       600          3
+  audio_w2v             377       377          0
+
+  Paper claims:
+    physiological recordings (Sec 3.2.2)       = 711
+    physiological tasks (Sec 4.1)              = 715
+    video recordings                           = 587
+    audio recordings                           = 385
+    tasks with all modalities                  = 370
+
+========================================================================
+4. AVAILABILITY MATRIX  (subject x task x 5 modalities)
+========================================================================
+  total task rows : 777
+  subjects        : 65
+  unique tasks    : 12
+
+  Per-modality availability:
+    ecg        774 / 777  ( 99.6%)   -> missing   0.4%
+    eda        773 / 777  ( 99.5%)   -> missing   0.5%
+    resp       774 / 777  ( 99.6%)   -> missing   0.4%
+    video      603 / 777  ( 77.6%)   -> missing  22.4%
+    audio      378 / 777  ( 48.6%)   -> missing  51.4%
+
+  Kitni modalities ek saath:
+    1 modalities :     3 tasks
+    3 modalities :   167 tasks
+    4 modalities :   237 tasks
+    5 modalities :   370 tasks
+
+  Saari 5 modalities present        : 370
+  Saari 5 + label bhi present       : 370
+  (paper 3-modality complete = 370 bolta hai)
+
+========================================================================
+5. MISSINGNESS PER TASK TYPE  (structured hai ya random?)
+========================================================================
+             ecg    eda   resp  video  audio   n
+task                                            
+Baseline   1.000  1.000  1.000  0.000  0.000  64
+Breathing  1.000  1.000  1.000  0.815  0.000  65
+Counting1  1.000  1.000  1.000  0.846  0.831  65
+Counting2  1.000  1.000  1.000  0.846  0.831  65
+Counting3  1.000  0.985  1.000  0.846  0.831  65
+Math       1.000  1.000  1.000  0.846  0.831  65
+Reading    1.000  1.000  1.000  0.846  0.831  65
+Relax      0.984  0.984  0.984  0.873  0.000  63
+Speaking   1.000  1.000  1.000  0.846  0.831  65
+Stroop     1.000  1.000  1.000  0.846  0.831  65
+Video1     0.985  0.985  0.985  0.846  0.000  65
+Video2     0.985  0.985  0.985  0.846  0.000  65
+
+  Agar audio ka column 0 ya 1 pe clamp hai (beech mein nahi),
+  toh missingness PROTOCOL-DRIVEN hai, random nahi.
+  Yahi tumhari thesis ka Point 1 hai.
+
+========================================================================
+6. TOP AVAILABILITY PATTERNS  (order: ecg eda resp video audio)
+========================================================================
+  11111  n=  370   ecg+eda+resp+video+audio
+  11110  n=  229   ecg+eda+resp+video
+  11100  n=  167   ecg+eda+resp
+  11101  n=    7   ecg+eda+resp+audio
+  00010  n=    3   video
+  10111  n=    1   ecg+resp+video+audio
+
+  Distinct patterns observed : 6  (max possible = 31)
+
+========================================================================
+7. SHORTCUT CHECK  (kya 'audio present' hi stress predict karta hai?)
+========================================================================
+  labeled tasks : 700
+
+  modality     present: stress%    absent: stress%
+  ------------------------------------------------
+  ecg                     52.6%               nan%
+  eda                     52.5%             100.0%
+  resp                    52.6%               nan%
+  video                   52.8%              51.0%
+  audio                   69.6%              32.6%
+
+  Bada gap = model sirf 'file hai ya nahi' dekh ke cheat kar sakta hai.
+  Ye Method 2 ka shortcut-detection experiment hai.
+
+========================================================================
+8. FILES SAVED
+========================================================================
+  outputs/availability_matrix.csv
+  outputs/missingness_per_task.csv
+  outputs/availability_patterns.csv
+  outputs/file_summary.csv
+
+Audit complete.

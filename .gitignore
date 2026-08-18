@@ -1,0 +1,6 @@
+PROJECT_SUMMARY_SIMPLE.md
+WEDNESDAY_MEETING_SCRIPT.md
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

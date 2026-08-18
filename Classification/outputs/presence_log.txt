@@ -1,0 +1,168 @@
+====================================================================
+CONTROL BASELINES   label='binary-stress'   n_splits=10   subject-wise splits
+====================================================================
+  labeled tasks : 700
+  subjects      : 64
+  class balance : {0: 332, 1: 368}   (majority = 0.526)
+  distinct presence patterns among labeled tasks : 5
+  distinct tasks : 11
+
+--------------------------------------------------------------------
+BASELINE: 1_majority   (5 features, 700 tasks)
+  floor -- kuch nahi seekhta, hamesha majority class
+--------------------------------------------------------------------
+  DummyClassifier          F1 0.332 (+/-0.085)   BAcc 0.500 (+/-0.000)
+
+--------------------------------------------------------------------
+BASELINE: 2_presence_only   (5 features, 700 tasks)
+  input = sirf 5 bits (kaunsi modality maujood hai)
+--------------------------------------------------------------------
+  LogisticRegression       F1 0.652 (+/-0.073)   BAcc 0.656 (+/-0.072)
+  RandomForestClassifier   F1 0.652 (+/-0.073)   BAcc 0.656 (+/-0.072)
+
+--------------------------------------------------------------------
+BASELINE: 3_task_identity   (11 features, 700 tasks)
+  input = sirf one-hot task label, koi signal nahi
+--------------------------------------------------------------------
+  LogisticRegression       F1 0.685 (+/-0.052)   BAcc 0.695 (+/-0.038)
+  RandomForestClassifier   F1 0.673 (+/-0.067)   BAcc 0.689 (+/-0.042)
+
+--------------------------------------------------------------------
+BASELINE: 4_presence_plus_task   (16 features, 700 tasks)
+  dono metadata saath
+--------------------------------------------------------------------
+  LogisticRegression       F1 0.682 (+/-0.060)   BAcc 0.689 (+/-0.051)
+  RandomForestClassifier   F1 0.670 (+/-0.062)   BAcc 0.675 (+/-0.056)
+
+--------------------------------------------------------------------
+BASELINE: 5_real_features   (132 features, 699 tasks)
+  ceiling -- asli physiological signal (all_physiological_features.csv)
+--------------------------------------------------------------------
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression       F1 0.666 (+/-0.053)   BAcc 0.678 (+/-0.040)
+  RandomForestClassifier   F1 0.680 (+/-0.057)   BAcc 0.694 (+/-0.043)
+
+====================================================================
+SUMMARY -- sab subject-wise splits pe
+====================================================================
+            baseline             classifier    f1  f1_std  bacc  bacc_std  n_features  n_tasks
+          1_majority        DummyClassifier 0.332   0.085 0.500     0.000           5      700
+     2_presence_only     LogisticRegression 0.652   0.073 0.656     0.072           5      700
+     2_presence_only RandomForestClassifier 0.652   0.073 0.656     0.072           5      700
+     3_task_identity     LogisticRegression 0.685   0.052 0.695     0.038          11      700
+     3_task_identity RandomForestClassifier 0.673   0.067 0.689     0.042          11      700
+4_presence_plus_task     LogisticRegression 0.682   0.060 0.689     0.051          16      700
+4_presence_plus_task RandomForestClassifier 0.670   0.062 0.675     0.056          16      700
+     5_real_features     LogisticRegression 0.666   0.053 0.678     0.040         132      699
+     5_real_features RandomForestClassifier 0.680   0.057 0.694     0.043         132      699
+
+--------------------------------------------------------------------
+Har baseline ka BEST score:
+                         f1   bacc
+baseline                          
+1_majority            0.332  0.500
+2_presence_only       0.652  0.656
+3_task_identity       0.685  0.695
+4_presence_plus_task  0.682  0.689
+5_real_features       0.680  0.694
+
+--------------------------------------------------------------------
+METADATA vs REAL SIGNAL
+  best metadata-only   : F1 0.685   BAcc 0.695
+  real features        : F1 0.680   BAcc 0.694
+  asli signal ka faayda: F1 -0.005   BAcc -0.001
+--------------------------------------------------------------------
+  => METADATA ASLI FEATURES SE BEHTAR HAI.
+     Is benchmark pe reported performance ka bada hissa
+     stress signal se nahi, dataset ki structure se aata hai.
+
+Saved: outputs/presence_baseline_summary.csv

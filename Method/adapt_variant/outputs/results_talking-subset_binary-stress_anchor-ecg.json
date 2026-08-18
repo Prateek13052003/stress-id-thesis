@@ -1,0 +1,827 @@
+{
+  "args": {
+    "target": "binary-stress",
+    "anchor": "ecg",
+    "n_folds": 5,
+    "val_frac": 0.2,
+    "epochs_anchor": 150,
+    "epochs_fusion": 150,
+    "patience": 12,
+    "batch_size": 64,
+    "lr": 0.001,
+    "temperature": 0.08,
+    "dropout_p": 0.3,
+    "seed": 1999,
+    "device": "cpu"
+  },
+  "n_rows": 448,
+  "n_subjects": 64,
+  "per_fold": [
+    {
+      "train": {
+        "balanced_acc": 0.5894736842105264,
+        "f1": 0.6486766581632653,
+        "n": 280
+      },
+      "val": {
+        "balanced_acc": 0.5380844645550528,
+        "f1": 0.5930701870906434,
+        "n": 77
+      },
+      "full": {
+        "balanced_acc": 0.5,
+        "f1": 0.6688963210702341,
+        "n": 91,
+        "within_task_balanced_acc": 0.5,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "no_video": {
+        "balanced_acc": 0.5,
+        "f1": 0.6688963210702341,
+        "n": 91,
+        "within_task_balanced_acc": 0.5,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "no_audio": {
+        "balanced_acc": 0.4785714285714286,
+        "f1": 0.6523855890944499,
+        "n": 91,
+        "within_task_balanced_acc": 0.4780844155844156,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.45454545454545453,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.45454545454545453,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "real_life_no_video_no_audio": {
+        "balanced_acc": 0.4785714285714286,
+        "f1": 0.6523855890944499,
+        "n": 91,
+        "within_task_balanced_acc": 0.47564935064935066,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.45454545454545453,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.375,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      }
+    },
+    {
+      "train": {
+        "balanced_acc": 0.6851992891596852,
+        "f1": 0.7675122879340415,
+        "n": 280
+      },
+      "val": {
+        "balanced_acc": 0.5683962264150944,
+        "f1": 0.6522121945850758,
+        "n": 77
+      },
+      "full": {
+        "balanced_acc": 0.49558823529411766,
+        "f1": 0.4317888113508552,
+        "n": 91,
+        "within_task_balanced_acc": 0.4927721088435374,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.44047619047619047,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5714285714285714,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "no_video": {
+        "balanced_acc": 0.5276960784313726,
+        "f1": 0.46605568344698783,
+        "n": 91,
+        "within_task_balanced_acc": 0.5310374149659864,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.5833333333333334,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5714285714285714,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.625,
+            "n": 13
+          }
+        }
+      },
+      "no_audio": {
+        "balanced_acc": 0.5205882352941177,
+        "f1": 0.4733535967578521,
+        "n": 91,
+        "within_task_balanced_acc": 0.5202380952380953,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.6,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.5952380952380952,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5714285714285714,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "real_life_no_video_no_audio": {
+        "balanced_acc": 0.5178921568627451,
+        "f1": 0.45950643030935007,
+        "n": 91,
+        "within_task_balanced_acc": 0.5185374149659864,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.6,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.5833333333333334,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5714285714285714,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      }
+    },
+    {
+      "train": {
+        "balanced_acc": 0.6141615191031801,
+        "f1": 0.6811791383219954,
+        "n": 280
+      },
+      "val": {
+        "balanced_acc": 0.5922619047619048,
+        "f1": 0.7107711598746081,
+        "n": 77
+      },
+      "full": {
+        "balanced_acc": 0.49016203703703703,
+        "f1": 0.5888913807281154,
+        "n": 91,
+        "within_task_balanced_acc": 0.48035714285714287,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.4,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.45,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.475,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.6,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "no_video": {
+        "balanced_acc": 0.5457175925925926,
+        "f1": 0.6446243814664868,
+        "n": 91,
+        "within_task_balanced_acc": 0.5380952380952381,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.6166666666666667,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.45,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.75,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.375,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5375,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5375,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "no_audio": {
+        "balanced_acc": 0.47453703703703703,
+        "f1": 0.5753121063465891,
+        "n": 91,
+        "within_task_balanced_acc": 0.4642857142857143,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.35,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.45,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.475,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5375,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "real_life_no_video_no_audio": {
+        "balanced_acc": 0.5193865740740741,
+        "f1": 0.6192404087140929,
+        "n": 91,
+        "within_task_balanced_acc": 0.5130952380952382,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5666666666666667,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.45,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.625,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.475,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.4375,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.5375,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      }
+    },
+    {
+      "train": {
+        "balanced_acc": 0.6390625930558037,
+        "f1": 0.7262442222938836,
+        "n": 280
+      },
+      "val": {
+        "balanced_acc": 0.544010889292196,
+        "f1": 0.6953955135773318,
+        "n": 77
+      },
+      "full": {
+        "balanced_acc": 0.4775252525252525,
+        "f1": 0.45652012751130555,
+        "n": 91,
+        "within_task_balanced_acc": 0.4792517006802721,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.4444444444444444,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.3888888888888889,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5714285714285714,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.45,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "no_video": {
+        "balanced_acc": 0.4914141414141414,
+        "f1": 0.47802197802197804,
+        "n": 91,
+        "within_task_balanced_acc": 0.48718820861678,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5714285714285714,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.4444444444444444,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.4444444444444444,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5714285714285714,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.45,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.42857142857142855,
+            "n": 13
+          }
+        }
+      },
+      "no_audio": {
+        "balanced_acc": 0.5053030303030303,
+        "f1": 0.4987139345513112,
+        "n": 91,
+        "within_task_balanced_acc": 0.5073129251700681,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.5694444444444444,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.3888888888888889,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.6428571428571428,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.45,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      },
+      "real_life_no_video_no_audio": {
+        "balanced_acc": 0.4775252525252525,
+        "f1": 0.45652012751130555,
+        "n": 91,
+        "within_task_balanced_acc": 0.47528344671201816,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.48809523809523814,
+            "n": 13
+          },
+          "Counting2": {
+            "balanced_acc": 0.4444444444444444,
+            "n": 13
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Math": {
+            "balanced_acc": 0.4444444444444444,
+            "n": 13
+          },
+          "Reading": {
+            "balanced_acc": 0.5,
+            "n": 13
+          },
+          "Speaking": {
+            "balanced_acc": 0.45,
+            "n": 13
+          },
+          "Stroop": {
+            "balanced_acc": 0.5,
+            "n": 13
+          }
+        }
+      }
+    },
+    {
+      "train": {
+        "balanced_acc": 0.6739921907978049,
+        "f1": 0.723929472324851,
+        "n": 287
+      },
+      "val": {
+        "balanced_acc": 0.4494047619047619,
+        "f1": 0.5775401069518716,
+        "n": 77
+      },
+      "full": {
+        "balanced_acc": 0.5580808080808081,
+        "f1": 0.7261225502356735,
+        "n": 84,
+        "within_task_balanced_acc": 0.5312770562770562,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.4090909090909091,
+            "n": 12
+          },
+          "Counting2": {
+            "balanced_acc": 0.45454545454545453,
+            "n": 12
+          },
+          "Counting3": {
+            "balanced_acc": 0.625,
+            "n": 12
+          },
+          "Math": {
+            "balanced_acc": 0.36363636363636365,
+            "n": 12
+          },
+          "Reading": {
+            "balanced_acc": 0.6666666666666666,
+            "n": 12
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 12
+          },
+          "Stroop": {
+            "balanced_acc": 0.7,
+            "n": 12
+          }
+        }
+      },
+      "no_video": {
+        "balanced_acc": 0.6262626262626263,
+        "f1": 0.7566787909193529,
+        "n": 84,
+        "within_task_balanced_acc": 0.6001803751803753,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.9090909090909092,
+            "n": 12
+          },
+          "Counting2": {
+            "balanced_acc": 0.4090909090909091,
+            "n": 12
+          },
+          "Counting3": {
+            "balanced_acc": 0.625,
+            "n": 12
+          },
+          "Math": {
+            "balanced_acc": 0.36363636363636365,
+            "n": 12
+          },
+          "Reading": {
+            "balanced_acc": 0.8333333333333333,
+            "n": 12
+          },
+          "Speaking": {
+            "balanced_acc": 0.611111111111111,
+            "n": 12
+          },
+          "Stroop": {
+            "balanced_acc": 0.45,
+            "n": 12
+          }
+        }
+      },
+      "no_audio": {
+        "balanced_acc": 0.5606060606060607,
+        "f1": 0.7410714285714286,
+        "n": 84,
+        "within_task_balanced_acc": 0.5393939393939393,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.45454545454545453,
+            "n": 12
+          },
+          "Counting2": {
+            "balanced_acc": 0.5,
+            "n": 12
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 12
+          },
+          "Math": {
+            "balanced_acc": 0.45454545454545453,
+            "n": 12
+          },
+          "Reading": {
+            "balanced_acc": 0.6666666666666666,
+            "n": 12
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 12
+          },
+          "Stroop": {
+            "balanced_acc": 0.7,
+            "n": 12
+          }
+        }
+      },
+      "real_life_no_video_no_audio": {
+        "balanced_acc": 0.5328282828282829,
+        "f1": 0.7200257014349967,
+        "n": 84,
+        "within_task_balanced_acc": 0.5036796536796537,
+        "within_task_per_task": {
+          "Counting1": {
+            "balanced_acc": 0.45454545454545453,
+            "n": 12
+          },
+          "Counting2": {
+            "balanced_acc": 0.5,
+            "n": 12
+          },
+          "Counting3": {
+            "balanced_acc": 0.5,
+            "n": 12
+          },
+          "Math": {
+            "balanced_acc": 0.45454545454545453,
+            "n": 12
+          },
+          "Reading": {
+            "balanced_acc": 0.6666666666666666,
+            "n": 12
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 12
+          },
+          "Stroop": {
+            "balanced_acc": 0.45,
+            "n": 12
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "train": {
+      "balanced_acc_mean": 0.6403778552654,
+      "balanced_acc_std": 0.03583056046689537
+    },
+    "val": {
+      "balanced_acc_mean": 0.5384316493858019,
+      "balanced_acc_std": 0.04848217697299165
+    },
+    "full": {
+      "balanced_acc_mean": 0.504271266587443,
+      "balanced_acc_std": 0.027941099238036397
+    },
+    "no_video": {
+      "balanced_acc_mean": 0.5382180877401466,
+      "balanced_acc_std": 0.048104111339392436
+    },
+    "no_audio": {
+      "balanced_acc_mean": 0.5079211583623348,
+      "balanced_acc_std": 0.03136531381135212
+    },
+    "real_life_no_video_no_audio": {
+      "balanced_acc_mean": 0.5052407389723566,
+      "balanced_acc_std": 0.022806296970904933
+    }
+  }
+}

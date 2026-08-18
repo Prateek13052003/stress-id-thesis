@@ -1,0 +1,285 @@
+{
+  "args": {
+    "target": "binary-stress",
+    "anchor": "ecg",
+    "n_folds": 1,
+    "val_frac": 0.2,
+    "epochs_anchor": 3,
+    "epochs_fusion": 3,
+    "patience": 2,
+    "batch_size": 64,
+    "lr": 0.001,
+    "temperature": 0.08,
+    "dropout_p": 0.3,
+    "seed": 1999,
+    "device": "cpu"
+  },
+  "per_fold": [
+    {
+      "train": {
+        "balanced_acc": 0.7087502290635881,
+        "f1": 0.7062442288914209,
+        "n": 469
+      },
+      "val": {
+        "balanced_acc": 0.7336890243902439,
+        "f1": 0.7184621750376198,
+        "n": 121
+      },
+      "full": {
+        "balanced_acc": 0.6306306306306306,
+        "f1": 0.6299300699300698,
+        "n": 110,
+        "within_task_balanced_acc": 0.49188311688311687,
+        "within_task_per_task": {
+          "Breathing": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Counting1": {
+            "balanced_acc": 0.8888888888888888,
+            "n": 10
+          },
+          "Counting2": {
+            "balanced_acc": 0.4444444444444444,
+            "n": 10
+          },
+          "Counting3": {
+            "balanced_acc": 0.375,
+            "n": 10
+          },
+          "Math": {
+            "balanced_acc": 0.3125,
+            "n": 10
+          },
+          "Reading": {
+            "balanced_acc": 0.5238095238095238,
+            "n": 10
+          },
+          "Relax": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Speaking": {
+            "balanced_acc": 0.42857142857142855,
+            "n": 10
+          },
+          "Stroop": {
+            "balanced_acc": 0.4375,
+            "n": 10
+          },
+          "Video1": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Video2": {
+            "balanced_acc": 0.5,
+            "n": 10
+          }
+        }
+      },
+      "no_video": {
+        "balanced_acc": 0.6103603603603603,
+        "f1": 0.6032742974576859,
+        "n": 110,
+        "within_task_balanced_acc": 0.45481601731601723,
+        "within_task_per_task": {
+          "Breathing": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Counting1": {
+            "balanced_acc": 0.2777777777777778,
+            "n": 10
+          },
+          "Counting2": {
+            "balanced_acc": 0.3888888888888889,
+            "n": 10
+          },
+          "Counting3": {
+            "balanced_acc": 0.4375,
+            "n": 10
+          },
+          "Math": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Reading": {
+            "balanced_acc": 0.5952380952380952,
+            "n": 10
+          },
+          "Relax": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Speaking": {
+            "balanced_acc": 0.42857142857142855,
+            "n": 10
+          },
+          "Stroop": {
+            "balanced_acc": 0.375,
+            "n": 10
+          },
+          "Video1": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Video2": {
+            "balanced_acc": 0.5,
+            "n": 10
+          }
+        }
+      },
+      "no_audio": {
+        "balanced_acc": 0.6302552552552552,
+        "f1": 0.638385933485752,
+        "n": 110,
+        "within_task_balanced_acc": 0.4571608946608947,
+        "within_task_per_task": {
+          "Breathing": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Counting1": {
+            "balanced_acc": 0.4444444444444444,
+            "n": 10
+          },
+          "Counting2": {
+            "balanced_acc": 0.4444444444444444,
+            "n": 10
+          },
+          "Counting3": {
+            "balanced_acc": 0.4375,
+            "n": 10
+          },
+          "Math": {
+            "balanced_acc": 0.3125,
+            "n": 10
+          },
+          "Reading": {
+            "balanced_acc": 0.5238095238095238,
+            "n": 10
+          },
+          "Relax": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Speaking": {
+            "balanced_acc": 0.42857142857142855,
+            "n": 10
+          },
+          "Stroop": {
+            "balanced_acc": 0.4375,
+            "n": 10
+          },
+          "Video1": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Video2": {
+            "balanced_acc": 0.5,
+            "n": 10
+          }
+        }
+      },
+      "real_life_no_video_no_audio": {
+        "balanced_acc": 0.609984984984985,
+        "f1": 0.6123076923076922,
+        "n": 110,
+        "within_task_balanced_acc": 0.4436327561327561,
+        "within_task_per_task": {
+          "Breathing": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Counting1": {
+            "balanced_acc": 0.3333333333333333,
+            "n": 10
+          },
+          "Counting2": {
+            "balanced_acc": 0.3888888888888889,
+            "n": 10
+          },
+          "Counting3": {
+            "balanced_acc": 0.4375,
+            "n": 10
+          },
+          "Math": {
+            "balanced_acc": 0.25,
+            "n": 10
+          },
+          "Reading": {
+            "balanced_acc": 0.5952380952380952,
+            "n": 10
+          },
+          "Relax": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Speaking": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Stroop": {
+            "balanced_acc": 0.375,
+            "n": 10
+          },
+          "Video1": {
+            "balanced_acc": 0.5,
+            "n": 10
+          },
+          "Video2": {
+            "balanced_acc": 0.5,
+            "n": 10
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "train": {
+      "balanced_acc_mean": 0.7087502290635881,
+      "balanced_acc_std": 0.0,
+      "f1_mean": 0.7062442288914209,
+      "f1_std": 0.0
+    },
+    "val": {
+      "balanced_acc_mean": 0.7336890243902439,
+      "balanced_acc_std": 0.0,
+      "f1_mean": 0.7184621750376198,
+      "f1_std": 0.0
+    },
+    "full": {
+      "balanced_acc_mean": 0.6306306306306306,
+      "balanced_acc_std": 0.0,
+      "f1_mean": 0.6299300699300698,
+      "f1_std": 0.0,
+      "within_task_balanced_acc_mean": 0.49188311688311687,
+      "within_task_balanced_acc_std": 0.0
+    },
+    "no_video": {
+      "balanced_acc_mean": 0.6103603603603603,
+      "balanced_acc_std": 0.0,
+      "f1_mean": 0.6032742974576859,
+      "f1_std": 0.0,
+      "within_task_balanced_acc_mean": 0.45481601731601723,
+      "within_task_balanced_acc_std": 0.0
+    },
+    "no_audio": {
+      "balanced_acc_mean": 0.6302552552552552,
+      "balanced_acc_std": 0.0,
+      "f1_mean": 0.638385933485752,
+      "f1_std": 0.0,
+      "within_task_balanced_acc_mean": 0.4571608946608947,
+      "within_task_balanced_acc_std": 0.0
+    },
+    "real_life_no_video_no_audio": {
+      "balanced_acc_mean": 0.609984984984985,
+      "balanced_acc_std": 0.0,
+      "f1_mean": 0.6123076923076922,
+      "f1_std": 0.0,
+      "within_task_balanced_acc_mean": 0.4436327561327561,
+      "within_task_balanced_acc_std": 0.0
+    }
+  }
+}

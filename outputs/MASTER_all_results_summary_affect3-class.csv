@@ -1,0 +1,24 @@
+label,chance,modality,feature_type,condition,n,balanced_acc,balanced_acc_std,source_file
+affect3-class,0.3333,task-name-only (no signal),majority_vote_per_task,"pooled, honest split",,0.4926,0.0312,outputs/task_identity_baseline_summary_affect3-class.csv
+affect3-class,0.3333,task-name-only (no signal),majority_vote_per_task,"WITHIN-TASK, honest split (empirical floor)",,0.3727,0.0254,outputs/task_identity_baseline_summary_affect3-class.csv
+affect3-class,0.3333,task-name-only (no signal),random_forest_on_task_onehot,"pooled, honest split",,0.5123,0.0342,outputs/task_identity_baseline_summary_affect3-class.csv
+affect3-class,0.3333,task-name-only (no signal),random_forest_on_task_onehot,"WITHIN-TASK, honest split (empirical floor)",,0.3727,0.0254,outputs/task_identity_baseline_summary_affect3-class.csv
+affect3-class,0.3333,physiological (ECG+EDA+RESP),"handcrafted, full 11-task pool",leaky_plain_kfold,699.0,0.5533,0.0399,outputs/dataset_audit_summary_affect3-class.csv
+affect3-class,0.3333,physiological (ECG+EDA+RESP),"handcrafted, full 11-task pool",honest_groupkfold,699.0,0.5072,0.0559,outputs/dataset_audit_summary_affect3-class.csv
+affect3-class,0.3333,physiological (ECG+EDA+RESP),"handcrafted, full 11-task pool",honest_groupkfold_within_task,699.0,0.3929,0.035,outputs/dataset_audit_summary_affect3-class.csv
+affect3-class,0.3333,physiological (talking-subset),majority_vote_per_task,"honest, confound-controlled",448.0,0.365,0.044,outputs/talking_subset_eval_summary_affect3-class.csv
+affect3-class,0.3333,physiological (talking-subset),rf_on_task_identity_only,"honest, confound-controlled",448.0,0.3533,0.0428,outputs/talking_subset_eval_summary_affect3-class.csv
+affect3-class,0.3333,physiological (talking-subset),rf_on_real_physio_features,"honest, confound-controlled",447.0,0.3228,0.016,outputs/talking_subset_eval_summary_affect3-class.csv
+affect3-class,0.3333,physiological (talking-subset),real features,leaky_task_wise,447.0,0.447,0.0472,outputs/talking_subset_leaky_test_summary_affect3-class.csv
+affect3-class,0.3333,physiological (talking-subset),real features,honest_subject_wise,447.0,0.3354,0.032,outputs/talking_subset_leaky_test_summary_affect3-class.csv
+affect3-class,0.3333,audio (talking-subset),w2v_honest_subject_wise,see test name,378.0,0.3504,0.0574,outputs/w2v_audio_eval_summary_affect3-class.csv
+affect3-class,0.3333,audio (talking-subset),hc_audio_honest_subject_wise,see test name,378.0,0.3673,0.0671,outputs/w2v_audio_eval_summary_affect3-class.csv
+affect3-class,0.3333,audio (talking-subset),w2v_leaky_task_wise,see test name,378.0,0.4552,0.0299,outputs/w2v_audio_eval_summary_affect3-class.csv
+affect3-class,0.3333,video (AU + gaze),talking_subset_honest,see test name,385.0,0.3358,0.0309,outputs/video_eval_summary_affect3-class.csv
+affect3-class,0.3333,video (AU + gaze),talking_subset_leaky,see test name,385.0,0.4298,0.0347,outputs/video_eval_summary_affect3-class.csv
+affect3-class,0.3333,video (AU + gaze),full_11task_pooled,see test name,600.0,0.4439,0.0552,outputs/video_eval_summary_affect3-class.csv
+affect3-class,0.3333,video (AU + gaze),full_11task_within_task,see test name,600.0,0.3769,0.0883,outputs/video_eval_summary_affect3-class.csv
+affect3-class,0.3333,"deep model, ECG-anchor",5-modality fusion,honest,448.0,0.3513,0.0303,Method/adapt_variant/outputs/results_talking-subset_affect3-class_anchor-ecg.json
+affect3-class,0.3333,"deep model, ECG-anchor",5-modality fusion,leaky,448.0,0.4267,0.0477,Method/adapt_variant/outputs/results_talking-subset_affect3-class_anchor-ecg-leaky.json
+affect3-class,0.3333,"deep model, ECG-anchor",5-modality fusion,"full 11-task pool, pooled",,0.4849,0.051,Method/adapt_variant/outputs/results_affect3-class_anchor-ecg.json
+affect3-class,0.3333,"deep model, ECG-anchor",5-modality fusion,"full 11-task pool, WITHIN-TASK",,0.3649,0.0442,Method/adapt_variant/outputs/results_affect3-class_anchor-ecg.json

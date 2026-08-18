@@ -1,0 +1,34 @@
+LABEL = binary-stress  (chance level = 0.500)
+
+======================================================================
+1. LEAKAGE CHECK: fraction of test-fold subjects also seen in training
+======================================================================
+Plain KFold (what the notebooks currently use):  100.0% of each test fold's subjects were ALSO in that fold's training set
+GroupKFold (subject-wise, correct):               0.0%
+
+======================================================================
+2. SCORE INFLATION: same features (all_physiological_features.csv), same RF(max_depth=5), 10 splits
+======================================================================
+Plain KFold      balanced_acc = 0.719 (+/- 0.036),  f1 = 0.723
+GroupKFold       balanced_acc = 0.706 (+/- 0.057),  f1 = 0.703
+Leakage inflation on balanced_acc: +0.013
+
+======================================================================
+2b. TASK-IDENTITY CONFOUND CHECK (see Classification/task_identity_baseline.py): knowing ONLY the task name can predict the label with zero physiological signal, because the label distribution differs by task (protocol design). WITHIN-TASK balanced_acc neutralizes this: it is exactly 0.500 (chance) for task-identity-only baselines, so any score above that here is real physiological signal, not task lookup.
+======================================================================
+GroupKFold (subject-wise, honest split), all_physiological_features.csv, RF:
+  pooled balanced_acc      = 0.706 (+/- 0.057)
+  WITHIN-TASK balanced_acc = 0.504 (+/- 0.019)   [chance = 0.500]
+  (task-identity-only baselines score exactly chance-level on this metric — see Classification/task_identity_baseline.py)
+
+======================================================================
+3. MISSING-MODALITY DATA LOSS (from build_multimodal_dataset.py)
+======================================================================
+Per-modality availability:
+ecg      1.000
+eda      0.999
+resp     1.000
+video    0.857
+audio    0.540
+Rows with all 5 modalities: 370/700 (52.9%)
+-> classification_multimodal_binary_stress.ipynb's inner-join keeps only this subset; the rest is silently discarded, not treated as a missing-modality case.

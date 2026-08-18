@@ -1,0 +1,2 @@
+dataset,n_seeds,modalities,top1_agreement,chance_top1,mean_pairwise_rank_corr,rank_stability,magnitude_validity,mean_top_utilization,explanation_stability_score,ecg_mean_utilization,resp_mean_utilization,eda_mean_utilization,ecg_std_utilization,resp_std_utilization,eda_std_utilization
+wesad,10,"ecg,resp,eda",1.0,0.3333333333333333,1.0,1.0,1.0,0.1337481404323035,1.0,0.1337481404323035,0.09002541500264724,0.013323163902086713,0.004807763209830922,0.007431079904765088,0.00421501237107128

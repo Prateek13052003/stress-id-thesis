@@ -1,0 +1,4 @@
+label,chance,condition,n,balanced_acc,balanced_acc_std
+binary-stress,0.5,leaky_plain_kfold,699,0.7192033285773273,0.03550294875932167
+binary-stress,0.5,honest_groupkfold,699,0.7064640014743531,0.05695452464174129
+binary-stress,0.5,honest_groupkfold_within_task,699,0.5038099747474748,0.018576442079313048

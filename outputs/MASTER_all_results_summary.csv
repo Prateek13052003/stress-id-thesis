@@ -1,0 +1,25 @@
+label,chance,modality,feature_type,condition,n,balanced_acc,balanced_acc_std,source_file
+binary-stress,0.5,task-name-only (no signal),majority_vote_per_task,"pooled, honest split",,0.7049,0.0125,outputs/task_identity_baseline_summary.csv
+binary-stress,0.5,task-name-only (no signal),majority_vote_per_task,"WITHIN-TASK, honest split (empirical floor)",,0.5,0.0,outputs/task_identity_baseline_summary.csv
+binary-stress,0.5,task-name-only (no signal),random_forest_on_task_onehot,"pooled, honest split",,0.6895,0.0253,outputs/task_identity_baseline_summary.csv
+binary-stress,0.5,task-name-only (no signal),random_forest_on_task_onehot,"WITHIN-TASK, honest split (empirical floor)",,0.5,0.0,outputs/task_identity_baseline_summary.csv
+binary-stress,0.5,physiological (ECG+EDA+RESP),"handcrafted, full 11-task pool",leaky_plain_kfold,699.0,0.7192,0.0355,outputs/dataset_audit_summary.csv
+binary-stress,0.5,physiological (ECG+EDA+RESP),"handcrafted, full 11-task pool",honest_groupkfold,699.0,0.7065,0.057,outputs/dataset_audit_summary.csv
+binary-stress,0.5,physiological (ECG+EDA+RESP),"handcrafted, full 11-task pool",honest_groupkfold_within_task,699.0,0.5038,0.0186,outputs/dataset_audit_summary.csv
+binary-stress,0.5,physiological (talking-subset),majority_vote_per_task,"honest, confound-controlled",448.0,0.5,0.0,outputs/talking_subset_eval_summary.csv
+binary-stress,0.5,physiological (talking-subset),rf_on_task_identity_only,"honest, confound-controlled",448.0,0.5,0.0,outputs/talking_subset_eval_summary.csv
+binary-stress,0.5,physiological (talking-subset),rf_on_real_physio_features,"honest, confound-controlled",447.0,0.4971,0.0115,outputs/talking_subset_eval_summary.csv
+binary-stress,0.5,physiological (talking-subset),real features,leaky_task_wise,447.0,0.5478,0.0305,outputs/talking_subset_leaky_test_summary.csv
+binary-stress,0.5,physiological (talking-subset),real features,honest_subject_wise,447.0,0.5091,0.0302,outputs/talking_subset_leaky_test_summary.csv
+binary-stress,0.5,audio (talking-subset),w2v_honest_subject_wise,see test name,378.0,0.5105,0.0307,outputs/w2v_audio_eval_summary.csv
+binary-stress,0.5,audio (talking-subset),hc_audio_honest_subject_wise,see test name,378.0,0.495,0.0288,outputs/w2v_audio_eval_summary.csv
+binary-stress,0.5,audio (talking-subset),w2v_leaky_task_wise,see test name,378.0,0.5757,0.03,outputs/w2v_audio_eval_summary.csv
+binary-stress,0.5,video (AU + gaze),talking_subset_honest,see test name,385.0,0.4933,0.0082,outputs/video_eval_summary.csv
+binary-stress,0.5,video (AU + gaze),talking_subset_leaky,see test name,385.0,0.5585,0.0278,outputs/video_eval_summary.csv
+binary-stress,0.5,video (AU + gaze),full_11task_pooled,see test name,600.0,0.6087,0.0688,outputs/video_eval_summary.csv
+binary-stress,0.5,video (AU + gaze),full_11task_within_task,see test name,600.0,0.5,0.0785,outputs/video_eval_summary.csv
+binary-stress,0.5,"deep model, ECG-anchor",5-modality fusion,honest,448.0,0.5043,0.0279,Method/adapt_variant/outputs/results_talking-subset_binary-stress_anchor-ecg.json
+binary-stress,0.5,"deep model, ECG-anchor",5-modality fusion,leaky,448.0,0.554,0.037,Method/adapt_variant/outputs/results_talking-subset_binary-stress_anchor-ecg-leaky.json
+binary-stress,0.5,"deep model, RESP-anchor",5-modality fusion,honest,448.0,0.501,0.0073,Method/adapt_variant/outputs/results_talking-subset_binary-stress_anchor-resp.json
+binary-stress,0.5,"deep model, ECG-anchor",5-modality fusion,"full 11-task pool, pooled",,0.6889,0.0184,Method/adapt_variant/outputs/results_binary-stress_anchor-ecg.json
+binary-stress,0.5,"deep model, ECG-anchor",5-modality fusion,"full 11-task pool, WITHIN-TASK",,0.5039,0.0079,Method/adapt_variant/outputs/results_binary-stress_anchor-ecg.json

@@ -1,0 +1,2 @@
+dataset,n_seeds,modalities,top1_agreement,chance_top1,mean_pairwise_rank_corr,rank_stability,magnitude_validity,mean_top_utilization,explanation_stability_score,ecg_mean_utilization,eda_mean_utilization,resp_mean_utilization,ecg_std_utilization,eda_std_utilization,resp_std_utilization
+stressid,10,"ecg,eda,resp",1.0,0.3333333333333333,1.0,1.0,0.0,-0.003191730232514318,0.0,-0.013648901790750827,-0.003191730232514318,-0.026930519615163583,0.004184925821976924,0.004281895567749502,0.0035631437094669222

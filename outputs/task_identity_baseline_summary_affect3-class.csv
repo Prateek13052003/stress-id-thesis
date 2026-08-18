@@ -1,0 +1,3 @@
+label,chance,baseline,pooled_balanced_acc,pooled_balanced_acc_std,within_task_balanced_acc,within_task_balanced_acc_std
+affect3-class,0.3333333333333333,majority_vote_per_task,0.4925504664308427,0.031225089318170828,0.37272727272727274,0.025353334137396207
+affect3-class,0.3333333333333333,random_forest_on_task_onehot,0.5122955636973822,0.034238340477561545,0.37272727272727274,0.025353334137396207

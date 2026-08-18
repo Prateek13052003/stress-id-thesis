@@ -1,0 +1,3 @@
+condition,n,balanced_acc,balanced_acc_std
+leaky_kfold,535,0.9331582123493887,0.04609174166515087
+honest_groupkfold,535,0.8652619047619048,0.10811181200584745

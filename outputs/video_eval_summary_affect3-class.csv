@@ -1,0 +1,5 @@
+label,test,n,balanced_acc,balanced_acc_std
+affect3-class,talking_subset_honest,385,0.33579761591449964,0.030934422812773775
+affect3-class,talking_subset_leaky,385,0.429807349219416,0.03468046464768139
+affect3-class,full_11task_pooled,600,0.44388627798654473,0.055185360124935065
+affect3-class,full_11task_within_task,600,0.3768999518999519,0.08828524035679439

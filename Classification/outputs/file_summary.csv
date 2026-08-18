@@ -1,0 +1,10 @@
+file,rows,cols,subjects,labeled_rows
+ecg,774,46,65,700
+eda,773,24,65,699
+resp,774,62,65,700
+video,603,84,55,600
+audio,378,140,54,378
+physio_all,773,132,65,699
+video_7tasks,385,84,55,385
+video_morestat,603,462,55,600
+audio_w2v,377,2,54,377

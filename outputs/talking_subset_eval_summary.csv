@@ -1,0 +1,4 @@
+test,n,balanced_acc,balanced_acc_std
+majority_vote_per_task,448,0.5,0.0
+rf_on_task_identity_only,448,0.5,0.0
+rf_on_real_physio_features,447,0.49710201792880504,0.011537499615171962

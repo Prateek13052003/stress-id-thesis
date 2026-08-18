@@ -1,0 +1,10 @@
+baseline,classifier,f1,f1_std,bacc,bacc_std,n_features,n_tasks
+1_majority,DummyClassifier,0.332,0.085,0.5,0.0,5,700
+2_presence_only,LogisticRegression,0.652,0.073,0.656,0.072,5,700
+2_presence_only,RandomForestClassifier,0.652,0.073,0.656,0.072,5,700
+3_task_identity,LogisticRegression,0.685,0.052,0.695,0.038,11,700
+3_task_identity,RandomForestClassifier,0.673,0.067,0.689,0.042,11,700
+4_presence_plus_task,LogisticRegression,0.682,0.06,0.689,0.051,16,700
+4_presence_plus_task,RandomForestClassifier,0.67,0.062,0.675,0.056,16,700
+5_real_features,LogisticRegression,0.666,0.053,0.678,0.04,132,699
+5_real_features,RandomForestClassifier,0.68,0.057,0.694,0.043,132,699
